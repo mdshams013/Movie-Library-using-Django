@@ -1,0 +1,5 @@
+{% extends 'oasis/base.html'%} 
+
+{% block title %}My List{% endblock %}
+
+{% endblock %}
