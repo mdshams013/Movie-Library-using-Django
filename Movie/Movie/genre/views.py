@@ -2,7 +2,9 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 
 from .forms import NewMovie
-from .models import Name
+from .models import Name, Genre
+from dashboard.models import List, ListItems
+from django.http import HttpResponseRedirect
 
 def detail(request, pk):
     name = get_object_or_404(Name, pk=pk)
@@ -27,4 +29,5 @@ def new(request):
     return render(request, 'genre/add.html',{
         'add' : add
     })
+
 
